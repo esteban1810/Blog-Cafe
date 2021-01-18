@@ -1,0 +1,306 @@
+/* GLOBALES */
+
+:root {
+    --Open: 'Open Sans', sans-serif;
+    --Pt: 'PT Sans', sans-serif;
+
+    --primario: #784d3c;
+    --blanco: #fff;
+    --negro:#000;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    
+}
+
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 2;
+    font-family: var(--Open);
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+h4 {
+    font-size: 2.6rem;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--Pt);
+    line-height: 1.2;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* FIN GLOBALES */
+
+/* UTILIDADES */
+.contenedor {
+    width: min(90%,120rem);
+    margin: auto;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.boton {
+    color: white;
+    text-transform: uppercase;
+    font-family: var(--Pt);
+    font-weight: bold;
+    font-size: 2.2rem;
+    padding: 1rem 3rem;
+    display: block;
+    margin: 0 0 2rem 0;
+    text-align: center;
+    border-style: none;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+    }
+}
+
+.boton--primario {
+    background-color: var(--negro);
+}
+.boton--secundario {
+    background-color: var(--primario);
+}
+/* FIN UTILIDADES */
+
+/* HEADER */
+
+.webp .header {
+    background-image: url(../img/banner.webp);
+}
+
+.no-webp .header {
+    background-image: url(../img/banner.jpg);
+}
+
+.header {
+    height: 60rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header__texto {
+    color: var(--blanco);
+    padding-top: 10rem;
+}
+
+/* FIN HEADER */
+
+/* BARRA */
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.barra {
+    text-align: center;
+}
+
+.barra__logo,
+.barra__navegacion>.enlace {
+    color: var(--blanco);
+    font-family: var(--Pt);
+}
+
+.barra__logo{
+    font-size: 4.4rem;
+}
+
+.barra__navegacion {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.barra__navegacion>.enlace {
+    font-size: 2rem;
+}
+
+/* FIN BARRA */
+
+/* CONTENIDO-PRINCIPAL */
+
+@media (min-width: 768px) {
+    .contenido-principal {
+        display: grid;
+        grid-template-columns: 65% 35%;
+        column-gap: 3rem;
+    }
+}
+
+.blog__entrada {
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 2rem;
+}
+
+.blog__entrada:last-child {
+    border-bottom: none;
+    margin-top: none;
+}
+/* FIN CONTENIDO-PRINCIPAL */
+
+/* ASIDE */
+.cursos {
+    list-style: none;
+}
+
+.curso {
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.curso:last-child {
+    border-bottom: none;
+}
+/* FIN ASIDE */
+
+/* FOOTER */
+.footer {
+    background-color: var(--negro);
+    padding: 3rem 0;
+    margin-top: 6rem;
+}
+
+@media (min-width: 768px) {
+    .footer .contenedor{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.footer__titulo {
+    color: var(--blanco);
+    padding-bottom: 2rem;
+    font-weight: normal;
+}
+
+.footer__navegacion a {
+    color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+    .footer__navegacion {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.footer .enlace {
+    display: block;
+    font-size: 2rem;
+}
+
+/* FIN FOOTER */
+
+/* NOSOTROS */
+@media (min-width: 768px) {
+    .nosotros {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+}
+/* FIN NOSOTROS */
+
+/* CURSOS */
+@media (min-width: 768px) {
+    div.curso {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+
+.curso {
+    padding:  2rem 0;
+}
+
+.precio .bold,
+.cupo .bold {
+    font-family: var(--Pt);
+    font-size: 2rem;
+}
+/* FIN CURSOS */
+
+/* CONTACTO */
+.contacto__bg {
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.form {
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    padding: 5rem;
+    width: 95%;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo__label {
+    flex-basis: 9rem;
+    padding-right: 2rem;
+    text-align: right;
+}
+.campo__input {
+    flex: 1;
+    border: 1px solid #ddd;
+}
+
+textarea {
+    height: 20rem;
+}
+/* FIN CONTACTO */
